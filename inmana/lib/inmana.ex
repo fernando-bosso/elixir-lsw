@@ -1,7 +1,9 @@
 defmodule Inmana do
   alias Inmana.Restaurants.Create, as: RestaurantCreate
   alias Inmana.Supplies.Create, as: SupplyCreate
+  alias Inmana.Supplies.Find, as: SupplyFind
 
   defdelegate create_restaurant(params), to: RestaurantCreate, as: :call
   defdelegate create_supply(params), to: SupplyCreate, as: :call
+  defdelegate get_supply(id), to: SupplyFind, as: :call
 end
